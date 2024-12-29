@@ -65,7 +65,7 @@ def main():
             elif stderr_file:
                 # ensure_directory_exists(stderr_file)
                 with open(stderr_file, stderr_mode) as f:
-                    f.write(" ".join(parts[1:]) + "\n")
+                    sys.stderr.write(" ".join(parts[1:]) + "\n")
             else:
                 sys.stdout.write(" ".join(parts[1:]) + "\n")
             continue
